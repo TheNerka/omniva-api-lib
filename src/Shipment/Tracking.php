@@ -39,6 +39,9 @@ class Tracking
                 throw new OmnivaException("Please set username and password");
             }
             $all_trackings = $this->request->getTracking();
+            if(isset($all_trackings['tracking'])) {
+                $all_trackings = $all_trackings['tracking']
+            }
 
             if (isset($all_trackings->event)) {
                 foreach ($all_trackings->event as $event) {
