@@ -40,7 +40,7 @@ class Tracking
             }
             $all_trackings = $this->request->getTracking();
             if(isset($all_trackings['tracking'])) {
-                $all_trackings = $all_trackings['tracking']
+                $all_trackings = $all_trackings['tracking'];
             }
 
             if (isset($all_trackings->event)) {
